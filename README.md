@@ -18,7 +18,11 @@ cp env-example .env
 vim .env
 
 # Build containers
-docker-compose build  # make build
+snap install docker
+
+docker-compose build
+
+ # make build
 ```
 
 The following ports will be bound for `monerod` by default, but you can override in `.env`:
@@ -46,7 +50,8 @@ It's fairly simple, use `docker-compose` to bring the containers up and down and
 docker-compose up -d            # make up
 
 # Check all logs
-docker-compose logs -f  
+docker-compose logs -f
+ 
 
 # Check monerod logs
 docker-compose logs -f monerod  # make logs
