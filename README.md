@@ -18,11 +18,15 @@ cp env-example .env
 vim .env
 
 # Build containers
+
 snap install docker
 
 docker-compose build
 
- # make build
+apt install make 
+
+make build
+
 ```
 
 The following ports will be bound for `monerod` by default, but you can override in `.env`:
